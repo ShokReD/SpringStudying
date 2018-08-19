@@ -14,7 +14,8 @@ class AnnotationsDemoApp {
 		
 			
 			// get the bean from spring container
-			Coach coach = context.getBean("thatSillyCoach", Coach.class);
+			// instead of using special bean id we can use class name of required bean
+			Coach coach = context.getBean("tennisCoach", Coach.class);
 		
 			
 			// call a method on the bean
