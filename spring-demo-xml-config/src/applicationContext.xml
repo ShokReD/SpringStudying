@@ -21,6 +21,8 @@
 		
 		<!-- name must be like setter method name without a word "set" -->
 		<property name="fortuneService"  ref="myFortune"/>
+		<property name="team" value="MyDangerousTeam"></property>
+		<property name="emailAddress" value="MyStrangeEMail@mail.com"></property>
 	</bean>
 
 </beans>
