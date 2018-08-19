@@ -16,4 +16,11 @@
 		<constructor-arg ref="myFortune"/>
 	</bean>
 
+	<bean id="myCricketCoach"
+		class="com.luv2code.springdemo.coach.impl.CricketCoach">
+		
+		<!-- name must be like setter method name without a word "set" -->
+		<property name="fortuneService"  ref="myFortune"/>
+	</bean>
+
 </beans>
