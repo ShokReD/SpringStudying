@@ -1,11 +1,23 @@
 package com.luv2code.springdemo.coach.impl;
 
 import com.luv2code.springdemo.coach.Coach;
+import com.luv2code.springdemo.services.FortuneService;
 
 public class TrackCoach implements Coach {
 
+	private FortuneService service;
+	
+	public TrackCoach(FortuneService service) {
+		this.service = service;
+	}
+	
 	@Override
 	public String getDailyWorkout() {
 		return "Run a hard 5k";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		return "Just do it: " + service.getFortune();
 	}
 }
