@@ -1,0 +1,8 @@
+Rules of default bean names (inside a component annotation):
+
+1. class "HappyFortuneService" -> bean name "happyFortuneService"
+2. class "RESTFortuneService" -> bean name "RESTFortuneService"
+3. class "IFortuneService" -> bean name "IFortuneService"
+
+As we can see above, if we have two first letters of classname in upper case, 
+then default bean name is the same of classname. 

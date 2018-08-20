@@ -1,6 +1,7 @@
 package com.luv2code.springdemo.coaches.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.luv2code.springdemo.coaches.Coach;
@@ -12,6 +13,7 @@ public class HokkeyCoach implements Coach {
 	private FortuneService service;
 	
 	@Autowired
+	@Qualifier("randomService")
 	// here I can name method with any name and 
 	// annotation @Autowired will understand it
 	public void doSomeCrazyStuff(FortuneService service) {
