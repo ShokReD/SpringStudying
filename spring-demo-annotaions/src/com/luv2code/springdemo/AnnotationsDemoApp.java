@@ -17,10 +17,12 @@ class AnnotationsDemoApp {
 			// instead of using special bean id we can use class name of required bean
 			Coach coach = context.getBean("tennisCoach", Coach.class);
 		
-			
 			// call a method on the bean
 			System.out.println(coach.getDailyWorkout());
 		
+			// call method to get the daily fortune
+			System.out.println(coach.getDailyFortune());
+
 		}
 	}
 }
