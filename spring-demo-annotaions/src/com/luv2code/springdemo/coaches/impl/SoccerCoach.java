@@ -7,19 +7,13 @@ import com.luv2code.springdemo.coaches.Coach;
 import com.luv2code.springdemo.services.FortuneService;
 
 @Component
-public class HokkeyCoach implements Coach {
+public class SoccerCoach implements Coach {
 
+	@Autowired
 	private FortuneService service;
 	
-	@Autowired
-	// here I can name method with any name and 
-	// annotation @Autowired will understand it
-	public void doSomeCrazyStuff(FortuneService service) {
-		this.service = service;
-	}
-	
 	public String getDailyWorkout() {
-		return "Throw one hundred pucks";
+		return "Rich ten goals in this game";
 	}
 
 	@Override
