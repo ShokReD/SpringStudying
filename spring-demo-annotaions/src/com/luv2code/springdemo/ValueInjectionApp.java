@@ -10,10 +10,10 @@ public class ValueInjectionApp {
 		try (ClassPathXmlApplicationContext context =
 				new ClassPathXmlApplicationContext("applicationContext.xml")) {
 		
-		HokkeyCoach coach = context.getBean("hokkeyCoach", HokkeyCoach.class);
+			HokkeyCoach coach = context.getBean("hokkeyCoach", HokkeyCoach.class);
 		
-		System.out.println(coach.getEmail());
-		System.out.println(coach.getTeam());
+			System.out.println(coach.getEmail());
+			System.out.println(coach.getTeam());
 		
 		}
 	}
