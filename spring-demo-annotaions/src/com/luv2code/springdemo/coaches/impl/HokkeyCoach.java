@@ -2,6 +2,7 @@ package com.luv2code.springdemo.coaches.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.luv2code.springdemo.coaches.Coach;
@@ -12,6 +13,20 @@ public class HokkeyCoach implements Coach {
 
 	private FortuneService service;
 	
+	@Value("${foo.email}")
+	private String email;
+	
+	@Value("${foo.team}")
+	private String team;
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
 	@Autowired
 	@Qualifier("randomService")
 	// here I can name method with any name and 
