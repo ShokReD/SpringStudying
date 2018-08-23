@@ -12,6 +12,9 @@
 		<form:form action="processForm" modelAttribute="student">
 			First name: <form:input path="firstName"/>
 			Last name: <form:input path="lastName"/>
+			
+			<br>
+			
 			Country: 
 			<form:select path="country">
 				<form:option value="USA" label="USA"/>
@@ -20,11 +23,22 @@
 				<form:option value="Russia" label="Russia"/>
 			</form:select>
 			
+			<br>
+			
 			Favorite language:
 			Java <form:radiobutton path="favoriteLanguage" value="Java" />
 			C# <form:radiobutton path="favoriteLanguage" value="C#" />
 			PHP <form:radiobutton path="favoriteLanguage" value="PHP" />
 			Ruby <form:radiobutton path="favoriteLanguage" value="Ruby" />
+			
+			<br>
+			
+			Operating Systems:
+			Linux: <form:checkbox path="OperatingSystems" value="Linux"/>
+			MacOS: <form:checkbox path="OperatingSystems" value="MacOS"/>
+			Windows: <form:checkbox path="OperatingSystems" value="Windows"/>
+			
+			<br>
 			
 			<input type="submit" value="Submit">
 		</form:form>

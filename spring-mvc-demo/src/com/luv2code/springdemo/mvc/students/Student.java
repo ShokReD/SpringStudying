@@ -1,12 +1,14 @@
 package com.luv2code.springdemo.mvc.students;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 
 public class Student {
 	private String firstName;
 	private String lastName;
 	private String country;
 	private String favoriteLanguage;
+	private List<String> operatingSystems;
 		
 	private LinkedHashMap<String, String> countryOptions;
 	
@@ -53,5 +55,13 @@ public class Student {
 
 	public void setFavoriteLanguage(String favoriteLanguage) {
 		this.favoriteLanguage = favoriteLanguage;
+	}
+
+	public List<String> getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(List<String> operatingSystems) {
+		this.operatingSystems = operatingSystems;
 	}
 }
