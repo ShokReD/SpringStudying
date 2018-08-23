@@ -19,6 +19,7 @@ public class StudentController {
 		student.setFirstName("John");
 		student.setLastName("Cena");
 		student.setCountry("Russia");
+		student.setFavoriteLanguage("Ruby");
 		
 		// add student object to the model
 		model.addAttribute("student", student);
