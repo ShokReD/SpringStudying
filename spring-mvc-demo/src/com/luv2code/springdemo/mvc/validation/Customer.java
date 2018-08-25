@@ -3,6 +3,7 @@ package com.luv2code.springdemo.mvc.validation;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Customer {
@@ -15,6 +16,10 @@ public class Customer {
 	@Min(value=0, message="must be greater than or equal to zero")
 	@Max(value=10, message="must be less than or equal to ten")
 	private int freePasses;
+	
+	@NotNull(message="is required")
+	@Pattern(regexp="^[a-zA-Z0-9]{5}$", message="only 5 letters/digits")
+	private String postalCode;
 	
 	public String getFirstName() {
 		return firstName;
@@ -34,5 +39,10 @@ public class Customer {
 	public void setFreePasses(int freePasses) {
 		this.freePasses = freePasses;
 	}
-
+	public String getPostalCode() {
+		return postalCode;
+	}
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
 }

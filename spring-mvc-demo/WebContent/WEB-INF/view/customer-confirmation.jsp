@@ -9,5 +9,7 @@
 		LastName: ${customer.lastName}
 		<br><br>
 		FreePasses: ${customer.freePasses}
+		<br><br>
+		PostalCode: ${customer.postalCode}
 	</body>
 </html>
