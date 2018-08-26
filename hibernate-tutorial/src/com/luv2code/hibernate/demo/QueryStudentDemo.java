@@ -26,6 +26,7 @@ public class QueryStudentDemo {
 			/*
 			 * Here, in method createQuery we show class (not table)
 			 * and this query is sensitive to case (first char is in capital case)
+			 * but column must be a table_fields
 			 */
 			List<Student> students = session.createQuery("from Student s where s.lastName != 'Rybkin'").list();
 			
