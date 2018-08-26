@@ -2,6 +2,8 @@ package com.luv2code.hibernate.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,9 +12,22 @@ import javax.persistence.Table;
 public class Student {
 	
 	@Id
+	/*
+	 * this annotation tells hibernate using generation type from database
+	 * There are 4 types:
+	 * * AUTO - automatic defining for database
+	 * * IDENTITY - define value as a column in database
+	 * * SEQUENCE - define value as a sequence in database
+	 * * TABLE - define value
+	 * Also we cat define custom generation strategy:
+	 * 1. Create subclass of org.hibernate.id.SequenceGenerator
+	 * 2. Override method: public Serializable generate(...)
+	 * But we have to pay attention on that always must be an unique value 
+	 */
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
-	
+
 	@Column(name="first_name")
 	private String firstName;
 	
