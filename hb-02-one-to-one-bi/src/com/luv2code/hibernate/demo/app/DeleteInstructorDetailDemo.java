@@ -17,7 +17,7 @@ public class DeleteInstructorDetailDemo {
 				.buildSessionFactory();
 		
 		try (Session session = factory.getCurrentSession()) {
-			int id = 2;
+			int id = 3;
 			
 			session.beginTransaction();
 			
@@ -26,6 +26,11 @@ public class DeleteInstructorDetailDemo {
 			
 			if (detail != null) {
 				System.out.println("Deleting: " + detail);
+				
+				// remove the associated object reference
+				// break bi-directional link
+				detail.getInstructor().setInstructorDetail(null);
+				
 				session.delete(detail);
 			}
 			
