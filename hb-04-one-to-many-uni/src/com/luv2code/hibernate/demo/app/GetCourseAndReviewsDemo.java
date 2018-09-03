@@ -9,7 +9,7 @@ import com.luv2code.hibernate.demo.entity.Instructor;
 import com.luv2code.hibernate.demo.entity.InstructorDetail;
 import com.luv2code.hibernate.demo.entity.Review;
 
-public class CreateCoursesDemo {
+public class GetCourseAndReviewsDemo {
 
 	public static void main(String[] args) {
 		SessionFactory factory = new Configuration()
@@ -23,9 +23,14 @@ public class CreateCoursesDemo {
 		try (Session session = factory.getCurrentSession()) {
 			session.beginTransaction();
 
-			Course course = session.get(Course.class, 10);
+			Course course = new Course("Pacman");
 			
-			System.out.println("Got:" + course);
+			course.addReview(new Review("Great course"));
+			course.addReview(new Review("Cool course"));
+			course.addReview(new Review("Course for idiots"));
+			
+			System.out.println("Saving the course: " + course);
+			session.save(course);
 			
 			session.getTransaction().commit();
 			
