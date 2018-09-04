@@ -1,5 +1,6 @@
 package com.luv2code.hibernate.demo.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -94,5 +95,11 @@ public class Student {
 
 	public void setCourses(List<Course> courses) {
 		this.courses = courses;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", courses=" + courses + "]";
 	}
 }
