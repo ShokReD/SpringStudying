@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,7 +36,6 @@ public class TestDbServlet extends HttpServlet {
 		}
 		
 		try (Connection connection = DriverManager.getConnection(jdbcUrl, user,  pass)) {
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new ServletException(e);
