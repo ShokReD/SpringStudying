@@ -18,8 +18,20 @@
 			</div>
 		</div>
 		
+		<!-- This bicycle I added by myself <div id="AddCustomer">
+			<div>
+				<p><input name="AddCustomer" type="submit" value="Add customer" class="add-button"/></p>
+			</div>
+		</div>-->
+	
 		<div id="container">
 			<div id="content">
+			
+				<input type="button" value = "Add Customer"
+					onclick="window.location.href='showFormForAdd'; return false;"
+					class="add-button"
+				/>
+			
 				<table>
 					<tr>
 						<th>First Name</th>
